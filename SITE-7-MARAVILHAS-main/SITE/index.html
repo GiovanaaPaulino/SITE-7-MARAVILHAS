@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Pirâmide de Gizé – Maravilha do Mundo</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #fbe8c2;
+margin: 0;
+padding: 0;
+}
+
+header {
+background-color: #f9d188;
+color: #1d2b4f;
+padding: 20px;
+text-align: center;
+font-size: 40px;
+font-weight: bold;
+}
+
+nav {
+background-color: #fbe8c2;
+text-align: center;
+padding: 18px;
+}
+
+nav a {
+margin: 0 15px;
+text-decoration: none;
+color: brown;
+font-weight: bold;
+cursor: pointer;
+}
+
+main {
+padding: 50px;
+background-color: #f7c873;
+color: #1d2b4f;
+}
+
+main h1 {
+font-size: 45px;
+}
+
+main p {
+font-size: 28px;
+margin-bottom: 50px;
+}
+
+.imagens {
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+justify-content: center;
+margin-bottom: 30px;
+}
+
+.imagens img {
+width: 500px;
+height: auto;
+border-radius: 8px;
+box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+footer {
+background-color: #fbe8c2;
+text-align: center;
+padding: 15px;
+color: #333;
+font-size: 14px;
+}
+
+section {
+display: none;
+}
+
+section.ativa {
+display: block;
+}
+</style>
+</head>
+<body>
+
+<header>
+Pirâmide de Gizé
+</header>
+
+<nav>
+<a onclick="mostrar('inicio')">Página principal</a>
+<a onclick="mostrar('historia')">História do monumento</a>
+<a onclick="mostrar('maravilha')">Como virou uma das maravilhas</a>
+</nav>
+
+<main>
+<!-- Página principal -->
+<section id="inicio" class="ativa">
+<h1>A Grande Pirâmide de Gizé</h1>
+<p>A Grande Pirâmide de Gizé é um monumento localizado no Egito, considerado uma das mais impressionantes construções da humanidade. Foi construída há mais de 4.500 anos e serviu como túmulo para o faraó Quéops. É a única das sete maravilhas do mundo antigo que ainda existe.</p>
+<div class="imagens">
+<img src="./img/camelo.jpg" alt="Pirâmide de Gizé">
+<img src="./img/img.jpg" alt="Pirâmide lateral">
+<img src="./img/piramides-de-gize-o-que-sao-historia-como-surgiram-e-curiosidades.jpg" alt="Complexo de pirâmides">
+</div>
+</section>
+
+<!-- Página história -->
+<section id="historia">
+<h1>Construção e História</h1>
+<p>A Grande Pirâmide foi construída por volta de 2.560 a.C., durante o reinado do faraó Quéops. Ela serviu como tumba real e foi a mais alta estrutura do mundo por milhares de anos, feita com mais de 2 milhões de blocos de pedra calcária, pesando toneladas cada um.</p>
+<div class="imagens">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Kheops-Pyramid.jpg" alt="Pirâmide de Gizé">
+</div>
+</section>
+
+<!-- Página maravilha -->
+<section id="maravilha">
+<h1>Como se tornou uma das maravilhas do mundo</h1>
+<p>Em 2007, a Pirâmide de Gizé recebeu o título honorário de Maravilha do Mundo Antigo, por ser a única ainda existente. A votação pública das Novas 7 Maravilhas não a incluiu diretamente, mas ela foi homenageada por sua importância histórica e arquitetônica.</p>
+<div class="imagens">
+<img src="./img/vista-aeria-piramide.jpg" alt="Pirâmides vistas de cima">
+</div>
+</section>
+</main>
+
+<footer>
+    Giovana, Letícia, Renato e Sayuri • BBC News Brasil
+</footer>
+
+<script>
+function mostrar(id) {
+const secoes = document.querySelectorAll('section');
+secoes.forEach(secao => {
+secao.classList.remove('ativa');
+});
+document.getElementById(id).classList.add('ativa');
+}
+</script>
+
+</body>
+</html>
